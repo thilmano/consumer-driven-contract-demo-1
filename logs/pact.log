@@ -1,0 +1,87 @@
+I, [2020-08-10T16:24:29.674196 #20900]  INFO -- : Registered expected interaction GET /employee?validID=A5052880
+D, [2020-08-10T16:24:29.675185 #20900] DEBUG -- : {
+  "description": "a request for JSON data",
+  "request": {
+    "method": "GET",
+    "path": "/employee",
+    "query": {
+      "validID": [
+        "A5052880"
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "id": {
+        "json_class": "Pact::Term",
+        "data": {
+          "generate": "A5052880",
+          "matcher": {
+            "json_class": "Regexp",
+            "o": 0,
+            "s": "^[A-Z]{1}[0-9]{7}$"
+          }
+        }
+      },
+      "employee_name": "Tiger Nixon",
+      "employee_salary": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 320800
+      },
+      "employee_age": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 61
+      }
+    }
+  },
+  "metadata": null
+}
+I, [2020-08-10T16:24:29.685027 #20900]  INFO -- : Received request GET /employee?validID=A5052880
+D, [2020-08-10T16:24:29.685027 #20900] DEBUG -- : {
+  "path": "/employee",
+  "query": "validID=A5052880",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:9123",
+    "Accept-Encoding": "gzip, deflate",
+    "User-Agent": "node-superagent/3.8.3",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2020-08-10T16:24:29.686026 #20900]  INFO -- : Found matching response for GET /employee?validID=A5052880
+D, [2020-08-10T16:24:29.686026 #20900] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "id": {
+      "json_class": "Pact::Term",
+      "data": {
+        "generate": "A5052880",
+        "matcher": {
+          "json_class": "Regexp",
+          "o": 0,
+          "s": "^[A-Z]{1}[0-9]{7}$"
+        }
+      }
+    },
+    "employee_name": "Tiger Nixon",
+    "employee_salary": {
+      "json_class": "Pact::SomethingLike",
+      "contents": 320800
+    },
+    "employee_age": {
+      "json_class": "Pact::SomethingLike",
+      "contents": 61
+    }
+  }
+}
+I, [2020-08-10T16:24:29.696056 #20900]  INFO -- : Verifying - interactions matched
+I, [2020-08-10T16:24:29.707810 #20900]  INFO -- : Cleared interactions
+I, [2020-08-10T16:24:29.718812 #20900]  INFO -- : Writing pact for Our Provider to C:/CDC-Demo/pacts/our_little_consumer-our_provider.json

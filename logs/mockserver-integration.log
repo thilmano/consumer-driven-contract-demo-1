@@ -1,0 +1,611 @@
+I, [2020-04-26T12:52:38.695514 #8068]  INFO -- : Registered expected interaction GET /animals/available
+D, [2020-04-26T12:52:38.695514 #8068] DEBUG -- : {
+  "description": "a request for all animals",
+  "providerState": "is not authenticated",
+  "request": {
+    "method": "GET",
+    "path": "/animals/available"
+  },
+  "response": {
+    "status": 401,
+    "headers": {
+    }
+  },
+  "metadata": null
+}
+I, [2020-04-26T12:52:38.726774 #8068]  INFO -- : Received request GET /animals/available
+D, [2020-04-26T12:52:38.726774 #8068] DEBUG -- : {
+  "path": "/animals/available",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:52022",
+    "Accept-Encoding": "gzip, deflate",
+    "User-Agent": "node-superagent/3.8.3",
+    "Authorization": "Bearer token",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2020-04-26T12:52:38.727771 #8068]  INFO -- : Found matching response for GET /animals/available
+D, [2020-04-26T12:52:38.727771 #8068] DEBUG -- : {
+  "status": 401,
+  "headers": {
+  }
+}
+I, [2020-04-26T12:52:38.749108 #8068]  INFO -- : Verifying - interactions matched
+I, [2020-04-26T12:52:38.758998 #8068]  INFO -- : Cleared interactions
+I, [2020-04-26T12:52:38.783607 #8068]  INFO -- : Registered expected interaction GET /animals/available
+D, [2020-04-26T12:52:38.784601 #8068] DEBUG -- : {
+  "description": "a request for all animals",
+  "providerState": "Has some animals",
+  "request": {
+    "method": "GET",
+    "path": "/animals/available",
+    "headers": {
+      "Authorization": "Bearer token"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "json_class": "Pact::ArrayLike",
+      "contents": {
+        "id": {
+          "json_class": "Pact::SomethingLike",
+          "contents": 1
+        },
+        "available_from": {
+          "json_class": "Pact::Term",
+          "data": {
+            "generate": "2015-08-06T16:53:10.123+01:00",
+            "matcher": {
+              "json_class": "Regexp",
+              "o": 0,
+              "s": "^\\d{4}-[01]\\d-[0-3]\\dT[0-2]\\d:[0-5]\\d:[0-5]\\d\\.\\d{3,}([+-][0-2]\\d(:?[0-5]\\d)?|Z)$"
+            }
+          }
+        },
+        "first_name": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "Billy"
+        },
+        "last_name": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "Goat"
+        },
+        "animal": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "goat"
+        },
+        "age": {
+          "json_class": "Pact::SomethingLike",
+          "contents": 21
+        },
+        "gender": {
+          "json_class": "Pact::Term",
+          "data": {
+            "generate": "M",
+            "matcher": {
+              "json_class": "Regexp",
+              "o": 0,
+              "s": "F|M"
+            }
+          }
+        },
+        "location": {
+          "description": {
+            "json_class": "Pact::SomethingLike",
+            "contents": "Melbourne Zoo"
+          },
+          "country": {
+            "json_class": "Pact::SomethingLike",
+            "contents": "Australia"
+          },
+          "post_code": {
+            "json_class": "Pact::SomethingLike",
+            "contents": 3000
+          }
+        },
+        "eligibility": {
+          "available": {
+            "json_class": "Pact::SomethingLike",
+            "contents": true
+          },
+          "previously_married": {
+            "json_class": "Pact::SomethingLike",
+            "contents": false
+          }
+        },
+        "interests": {
+          "json_class": "Pact::ArrayLike",
+          "contents": "walks in the garden/meadow",
+          "min": 1
+        }
+      },
+      "min": 2
+    }
+  },
+  "metadata": null
+}
+I, [2020-04-26T12:52:38.791616 #8068]  INFO -- : Received request GET /animals/available
+D, [2020-04-26T12:52:38.791616 #8068] DEBUG -- : {
+  "path": "/animals/available",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:52022",
+    "Accept-Encoding": "gzip, deflate",
+    "User-Agent": "node-superagent/3.8.3",
+    "Authorization": "Bearer token",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2020-04-26T12:52:38.792581 #8068]  INFO -- : Found matching response for GET /animals/available
+D, [2020-04-26T12:52:38.793579 #8068] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "json_class": "Pact::ArrayLike",
+    "contents": {
+      "id": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 1
+      },
+      "available_from": {
+        "json_class": "Pact::Term",
+        "data": {
+          "generate": "2015-08-06T16:53:10.123+01:00",
+          "matcher": {
+            "json_class": "Regexp",
+            "o": 0,
+            "s": "^\\d{4}-[01]\\d-[0-3]\\dT[0-2]\\d:[0-5]\\d:[0-5]\\d\\.\\d{3,}([+-][0-2]\\d(:?[0-5]\\d)?|Z)$"
+          }
+        }
+      },
+      "first_name": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Billy"
+      },
+      "last_name": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Goat"
+      },
+      "animal": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "goat"
+      },
+      "age": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 21
+      },
+      "gender": {
+        "json_class": "Pact::Term",
+        "data": {
+          "generate": "M",
+          "matcher": {
+            "json_class": "Regexp",
+            "o": 0,
+            "s": "F|M"
+          }
+        }
+      },
+      "location": {
+        "description": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "Melbourne Zoo"
+        },
+        "country": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "Australia"
+        },
+        "post_code": {
+          "json_class": "Pact::SomethingLike",
+          "contents": 3000
+        }
+      },
+      "eligibility": {
+        "available": {
+          "json_class": "Pact::SomethingLike",
+          "contents": true
+        },
+        "previously_married": {
+          "json_class": "Pact::SomethingLike",
+          "contents": false
+        }
+      },
+      "interests": {
+        "json_class": "Pact::ArrayLike",
+        "contents": "walks in the garden/meadow",
+        "min": 1
+      }
+    },
+    "min": 2
+  }
+}
+I, [2020-04-26T12:52:38.813525 #8068]  INFO -- : Verifying - interactions matched
+I, [2020-04-26T12:52:38.823531 #8068]  INFO -- : Cleared interactions
+I, [2020-04-26T12:52:38.849046 #8068]  INFO -- : Registered expected interaction GET /animals/1
+D, [2020-04-26T12:52:38.850072 #8068] DEBUG -- : {
+  "description": "a request for an animal with ID 1",
+  "providerState": "Has an animal with ID 1",
+  "request": {
+    "method": "GET",
+    "path": {
+      "json_class": "Pact::Term",
+      "data": {
+        "generate": "/animals/1",
+        "matcher": {
+          "json_class": "Regexp",
+          "o": 0,
+          "s": "/animals/[0-9]+"
+        }
+      }
+    },
+    "headers": {
+      "Authorization": "Bearer token"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "id": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 1
+      },
+      "available_from": {
+        "json_class": "Pact::Term",
+        "data": {
+          "generate": "2015-08-06T16:53:10.123+01:00",
+          "matcher": {
+            "json_class": "Regexp",
+            "o": 0,
+            "s": "^\\d{4}-[01]\\d-[0-3]\\dT[0-2]\\d:[0-5]\\d:[0-5]\\d\\.\\d{3,}([+-][0-2]\\d(:?[0-5]\\d)?|Z)$"
+          }
+        }
+      },
+      "first_name": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Billy"
+      },
+      "last_name": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Goat"
+      },
+      "animal": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "goat"
+      },
+      "age": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 21
+      },
+      "gender": {
+        "json_class": "Pact::Term",
+        "data": {
+          "generate": "M",
+          "matcher": {
+            "json_class": "Regexp",
+            "o": 0,
+            "s": "F|M"
+          }
+        }
+      },
+      "location": {
+        "description": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "Melbourne Zoo"
+        },
+        "country": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "Australia"
+        },
+        "post_code": {
+          "json_class": "Pact::SomethingLike",
+          "contents": 3000
+        }
+      },
+      "eligibility": {
+        "available": {
+          "json_class": "Pact::SomethingLike",
+          "contents": true
+        },
+        "previously_married": {
+          "json_class": "Pact::SomethingLike",
+          "contents": false
+        }
+      },
+      "interests": {
+        "json_class": "Pact::ArrayLike",
+        "contents": "walks in the garden/meadow",
+        "min": 1
+      }
+    }
+  },
+  "metadata": null
+}
+I, [2020-04-26T12:52:38.870016 #8068]  INFO -- : Received request GET /animals/11
+D, [2020-04-26T12:52:38.870994 #8068] DEBUG -- : {
+  "path": "/animals/11",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:52022",
+    "Accept-Encoding": "gzip, deflate",
+    "User-Agent": "node-superagent/3.8.3",
+    "Authorization": "Bearer token",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2020-04-26T12:52:38.870994 #8068]  INFO -- : Found matching response for GET /animals/1
+D, [2020-04-26T12:52:38.871978 #8068] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "id": {
+      "json_class": "Pact::SomethingLike",
+      "contents": 1
+    },
+    "available_from": {
+      "json_class": "Pact::Term",
+      "data": {
+        "generate": "2015-08-06T16:53:10.123+01:00",
+        "matcher": {
+          "json_class": "Regexp",
+          "o": 0,
+          "s": "^\\d{4}-[01]\\d-[0-3]\\dT[0-2]\\d:[0-5]\\d:[0-5]\\d\\.\\d{3,}([+-][0-2]\\d(:?[0-5]\\d)?|Z)$"
+        }
+      }
+    },
+    "first_name": {
+      "json_class": "Pact::SomethingLike",
+      "contents": "Billy"
+    },
+    "last_name": {
+      "json_class": "Pact::SomethingLike",
+      "contents": "Goat"
+    },
+    "animal": {
+      "json_class": "Pact::SomethingLike",
+      "contents": "goat"
+    },
+    "age": {
+      "json_class": "Pact::SomethingLike",
+      "contents": 21
+    },
+    "gender": {
+      "json_class": "Pact::Term",
+      "data": {
+        "generate": "M",
+        "matcher": {
+          "json_class": "Regexp",
+          "o": 0,
+          "s": "F|M"
+        }
+      }
+    },
+    "location": {
+      "description": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Melbourne Zoo"
+      },
+      "country": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Australia"
+      },
+      "post_code": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 3000
+      }
+    },
+    "eligibility": {
+      "available": {
+        "json_class": "Pact::SomethingLike",
+        "contents": true
+      },
+      "previously_married": {
+        "json_class": "Pact::SomethingLike",
+        "contents": false
+      }
+    },
+    "interests": {
+      "json_class": "Pact::ArrayLike",
+      "contents": "walks in the garden/meadow",
+      "min": 1
+    }
+  }
+}
+I, [2020-04-26T12:52:38.889660 #8068]  INFO -- : Verifying - interactions matched
+I, [2020-04-26T12:52:38.900663 #8068]  INFO -- : Cleared interactions
+I, [2020-04-26T12:52:38.911599 #8068]  INFO -- : Registered expected interaction GET /animals/100
+D, [2020-04-26T12:52:38.911599 #8068] DEBUG -- : {
+  "description": "a request for an animal with ID 100",
+  "providerState": "Has no animals",
+  "request": {
+    "method": "GET",
+    "path": "/animals/100",
+    "headers": {
+      "Authorization": "Bearer token"
+    }
+  },
+  "response": {
+    "status": 404,
+    "headers": {
+    }
+  },
+  "metadata": null
+}
+I, [2020-04-26T12:52:38.935542 #8068]  INFO -- : Received request GET /animals/100
+D, [2020-04-26T12:52:38.936533 #8068] DEBUG -- : {
+  "path": "/animals/100",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:52022",
+    "Accept-Encoding": "gzip, deflate",
+    "User-Agent": "node-superagent/3.8.3",
+    "Authorization": "Bearer token",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2020-04-26T12:52:38.936533 #8068]  INFO -- : Found matching response for GET /animals/100
+D, [2020-04-26T12:52:38.936533 #8068] DEBUG -- : {
+  "status": 404,
+  "headers": {
+  }
+}
+I, [2020-04-26T12:52:38.947505 #8068]  INFO -- : Verifying - interactions matched
+I, [2020-04-26T12:52:38.956515 #8068]  INFO -- : Cleared interactions
+I, [2020-04-26T12:52:38.970443 #8068]  INFO -- : Registered expected interaction POST /animals
+D, [2020-04-26T12:52:38.970443 #8068] DEBUG -- : {
+  "description": "a request to create a new mate",
+  "request": {
+    "method": "POST",
+    "path": "/animals",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "json_class": "Pact::SomethingLike",
+      "contents": {
+        "id": 2,
+        "available_from": "2017-12-04T14:47:18.582Z",
+        "first_name": "Nanny",
+        "animal": "goat",
+        "last_name": "Doe",
+        "age": 27,
+        "gender": "F",
+        "location": {
+          "description": "Werribee Zoo",
+          "country": "Australia",
+          "post_code": 3000
+        },
+        "eligibility": {
+          "available": true,
+          "previously_married": true
+        },
+        "interests": [
+          "walks in the garden/meadow",
+          "parkour"
+        ]
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "json_class": "Pact::SomethingLike",
+      "contents": {
+        "id": 2,
+        "available_from": "2017-12-04T14:47:18.582Z",
+        "first_name": "Nanny",
+        "animal": "goat",
+        "last_name": "Doe",
+        "age": 27,
+        "gender": "F",
+        "location": {
+          "description": "Werribee Zoo",
+          "country": "Australia",
+          "post_code": 3000
+        },
+        "eligibility": {
+          "available": true,
+          "previously_married": true
+        },
+        "interests": [
+          "walks in the garden/meadow",
+          "parkour"
+        ]
+      }
+    }
+  },
+  "metadata": null
+}
+I, [2020-04-26T12:52:38.979456 #8068]  INFO -- : Received request POST /animals
+D, [2020-04-26T12:52:38.980417 #8068] DEBUG -- : {
+  "path": "/animals",
+  "query": "",
+  "method": "post",
+  "body": {
+    "id": 2,
+    "available_from": "2017-12-04T14:47:18.582Z",
+    "first_name": "Nanny",
+    "animal": "goat",
+    "last_name": "Doe",
+    "age": 27,
+    "gender": "F",
+    "location": {
+      "description": "Werribee Zoo",
+      "country": "Australia",
+      "post_code": 3000
+    },
+    "eligibility": {
+      "available": true,
+      "previously_married": true
+    },
+    "interests": [
+      "walks in the garden/meadow",
+      "parkour"
+    ]
+  },
+  "headers": {
+    "Content-Length": "322",
+    "Content-Type": "application/json; charset=utf-8",
+    "Host": "localhost:52022",
+    "Accept-Encoding": "gzip, deflate",
+    "User-Agent": "node-superagent/3.8.3",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2020-04-26T12:52:38.981414 #8068]  INFO -- : Found matching response for POST /animals
+D, [2020-04-26T12:52:38.982410 #8068] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "json_class": "Pact::SomethingLike",
+    "contents": {
+      "id": 2,
+      "available_from": "2017-12-04T14:47:18.582Z",
+      "first_name": "Nanny",
+      "animal": "goat",
+      "last_name": "Doe",
+      "age": 27,
+      "gender": "F",
+      "location": {
+        "description": "Werribee Zoo",
+        "country": "Australia",
+        "post_code": 3000
+      },
+      "eligibility": {
+        "available": true,
+        "previously_married": true
+      },
+      "interests": [
+        "walks in the garden/meadow",
+        "parkour"
+      ]
+    }
+  }
+}
+I, [2020-04-26T12:52:39.004353 #8068]  INFO -- : Verifying - interactions matched
+I, [2020-04-26T12:52:39.011372 #8068]  INFO -- : Cleared interactions
+I, [2020-04-26T12:52:39.023035 #8068]  INFO -- : Writing pact for Animal Profile Service to F:/pact-js-master/examples/e2e/pacts/matching_service-animal_profile_service.json

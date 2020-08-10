@@ -1,0 +1,47 @@
+{
+  "consumer": {
+    "name": "Our Little Consumer"
+  },
+  "provider": {
+    "name": "Our Provider"
+  },
+  "interactions": [
+    {
+      "description": "a request for JSON data",
+      "request": {
+        "method": "GET",
+        "path": "/employee",
+        "query": "validID=A5052880"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": {
+          "id": "A5052880",
+          "employee_name": "Tiger Nixon",
+          "employee_salary": 320800,
+          "employee_age": 61
+        },
+        "matchingRules": {
+          "$.body.id": {
+            "match": "regex",
+            "regex": "^[A-Z]{1}[0-9]{7}$"
+          },
+          "$.body.employee_salary": {
+            "match": "type"
+          },
+          "$.body.employee_age": {
+            "match": "type"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
